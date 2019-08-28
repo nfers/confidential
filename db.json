@@ -1,0 +1,42 @@
+{
+    "access-token": {
+        "accessToken": "7b515799f520a35f646da6b4adefecca",
+        "user": {
+          "name": "Test XLR8",
+          "avatar": "http:\/\/placehold.it\/180"
+        }
+    },
+    "get-data": {
+        "data":[
+            {
+                "key": "c4ca4238a0b923820dcc509a6f75849b",
+                "data": {
+                    "1a": 10,
+                    "2a": 50,
+                    "3a": 40,
+                    "4a": 30,
+                    "5a": 20,
+                    "6a": 10,
+                    "7a": 52,
+                    "8a": 123
+                }
+            },
+            {
+                "key": "c81e728d9d4c2f636f067f89cc14862c",
+                "data": {
+                    "1b": 10,
+                    "2c": 20,
+                    "3d": 1000,
+                    "4e": 0,
+                    "5f": 25,
+                    "6g": 30,
+                    "7h": 11,
+                    "8r": 3
+                }
+            }
+        ],
+        "operation": "*"
+    }
+    
+}
+      
