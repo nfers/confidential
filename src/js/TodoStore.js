@@ -11,28 +11,37 @@ export class TodoStore {
     xlr8rms.getData().then((resp)=>{
       // console.log(resp.data);
       this.todos = resp.data;
-      this.operation = resp.operation;      
+      this.operation = resp.operation; 
     });
   }
    @observable todos = [];
-   @observable operation = [];
-   
+   @observable operation = "";
 
+   @computed
+   get calcResult(){
+     let results = [];
 
-   @observable filter = ""
-   @computed get filteredTodos() {
-     var matchesFilter = new RegExp(this.filter, "i")
-     return this.todos.filter(todo => !this.filter || matchesFilter.test(todo.value))
+      if (this.todos.length > 0 && this.operation !=""){
+        this.todos.forEach(({data})=>{
+          Object.keys(data).forEach((key, index) =>{
+            if(typeof results[index] === 'undefined'){
+              results[index] = data[key];
+            }
+            else{
+              switch(this.operation){
+                case '*': results[index] *= data[key]; break;
+                case '/': results[index] /= data[key]; break;
+                case '+': results[index] += data[key]; break;
+                case '-': results[index] -= data[key]; break;
+              }
+            }
+          })
+        })
+      }
+
+      return results;
    }
 
-   createTodo(value) {
-     this.todos.push(new Todo(value))
-   }
-
-  clearComplete = () => {
-    const incompleteTodos = this.todos.filter(todo => !todo.complete)
-    this.todos.replace(incompleteTodos)
-  }
 };
 
 export default new TodoStore
