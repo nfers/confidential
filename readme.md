@@ -4,4 +4,4 @@ Para iniciar o projeto é necessário executar o comando:
 
 Confirme a versão utilizada no arquivo .babelrc
 
-É necessário instalar os pacotes conformar o arquivo "packege.json"
+É necessário instalar os pacotes conformar o arquivo "package.json"
