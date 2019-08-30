@@ -1,5 +1,6 @@
 import { computed, observable } from "mobx"
 import Xlr8rms from "./helpers/xlr8rms"
+import  "devextreme-react/";
 
 const xlr8rms = new Xlr8rms();
 
@@ -44,5 +45,5 @@ export class TodoStore {
 
 };
 
-export default new TodoStore
+export default new TodoStore;
 

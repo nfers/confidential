@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-
 import { Chart, Series } from 'devextreme-react/chart';
-
-import './config.js'
 
 class Bar extends Component {
   render() {

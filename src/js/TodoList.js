@@ -3,17 +3,14 @@ import { observer } from "mobx-react"
 import Xlr8rms from "./helpers/xlr8rms"
 import Bar from './components/Bar'
 
-
-
 const xlr8rms = new Xlr8rms();
-
 
 @observer
 export default class TodoList extends React.Component {
 
   render() {
-
-   const { store: { todos: data, operation, calcResult } } = this.props
+    
+   const { store: { todos: data, calcResult } } = this.props
    let teste = calcResult;
   
     const todoLis = 
@@ -31,7 +28,7 @@ export default class TodoList extends React.Component {
               </tr>
             })
           }
-        </tbody>
+        </tbody>       
         <tfoot>
           <tr>
           <td>Operação: </td>
@@ -46,9 +43,27 @@ export default class TodoList extends React.Component {
    
     return <div>
       <h1>Dados</h1>
-      <div>{todoLis}</div>
-      <Bar />
+      <div>{todoLis}</div>  
+      <div>
       
+      <Chart id={'chart'} dataSource={indexData}>
+        <Series
+          valueField={'oranges'}
+          argumentField={'todo.data'}
+          name={'My oranges'}
+          type={'bar'}
+          color={'#ffaa66'} />
+      </Chart>
+      
+      <div>
+        <Bar />
+      </div>
+      
+      </div>  
+    
     </div>
   }
 }
+
+
+
