@@ -21,7 +21,7 @@ export default class TodoList extends React.Component {
     const { store: { todos: data, calcResult } } = this.props
 
     const generateGraph = () => {
-      alert('Clicou')
+      alert('Atualizado!')
     }
 
 
