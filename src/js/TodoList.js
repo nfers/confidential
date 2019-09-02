@@ -21,7 +21,8 @@ export default class TodoList extends React.Component {
     let teste = calcResult;
 
     const todoLis =
-      <table className="table, table-bordered, table-hover">
+    <div class="table-responsive">
+      <table className="table, table-hover, table-responsive-sm, table table-bordered">
         <tbody>
           {
             data.map((todo, indexData) => {
@@ -40,7 +41,6 @@ export default class TodoList extends React.Component {
           <tr>
             <td>Operação: </td>
             {
-
               teste.map((value, index) => {
                 return <td key={index}><input value={teste[index]} /> </td>
               })
@@ -48,9 +48,10 @@ export default class TodoList extends React.Component {
           </tr>
         </tfoot>
       </table>
+      </div>
 
     return <div>
-      <h1>Dados</h1>
+      <h1 className="font-color=green">Dados</h1>
       <div>{todoLis}</div>
 
       <div>
