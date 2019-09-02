@@ -1,7 +1,18 @@
-Para iniciar o projeto é necessário executar o comando:
 
-- npm init
+## Clone o projeto 
 
-Confirme a versão utilizada no arquivo .babelrc
+- git clone git@github.com:nfers/confidential.git
 
-É necessário instalar os pacotes conformar o arquivo "package.json"
+## Acesse o caminho da pasta onde clonou o projeto    
+cd confidential
+
+## Comando de instalação
+
+- Para instalar as dependências do projeto é necessário executar "npm intall" no terminal (ou via CMD)
+
+
+## Inicializando o Projeto
+
+execute o comando 'npm run dev' para que o projeto seja instalado
+
+

@@ -1,43 +1,37 @@
-import React, { Component } from 'react';
-import { Chart, Series } from 'devextreme-react/chart';
+import React from "react"
 
-class Bar extends Component {
+import CanvasJSReact from '../../assets/canvasjs.react'
+var CanvasJS = CanvasJSReact.CanvasJS;
+var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
+export default class Bar extends React.Component {
   render() {
-    const dataSource = [
-      {
-        day: 'key',
-        oranges: 3
-      }, {
-        day: 'Tuesday',
-        oranges: 2
-      }, {
-        day: 'Wednesday',
-        oranges: 3
-      }, {
-        day: 'Thursday',
-        oranges: 4
-      }, {
-        day: 'Friday',
-        oranges: 6
-      }, {
-        day: 'Saturday',
-        oranges: 11
-      }, {
-        day: 'Sunday',
-        oranges: 4
-      }
-    ];
+    const options = {
+      title: {
+        text: "Dashboard"
+      },
+      data: [{
+        type: "column",
+        dataPoints: [
+          { label: "Dados 1", y: 10 },
+          { label: "Dados 1", y: 50 },
+          { label: "Operação", y: 40 },
+          { label: "Dados 1", y: 30 },
+          { label: "Dados 1", y: 20 },
+          { label: "Operação", y: 10 },
+          { label: "Operação", y: 52 },
+          { label: "Operação", y: 123 },
+        ]
+      }]
+    }
+
     return (
-      <Chart id={'chart'} dataSource={dataSource}>
-        <Series
-          valueField={'oranges'}
-          argumentField={'day'}
-          name={'My oranges'}
-          type={'bar'}
-          color={'#ffaa66'} />
-      </Chart>
+      <div>
+        <CanvasJSChart options={options}
+        /*onRef = {ref => this.chart = ref} */
+        />
+      </div>
     );
   }
 }
-
-export default Bar;
+//export default Bar;
