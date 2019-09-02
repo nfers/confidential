@@ -12,12 +12,13 @@ export class TodoStore {
     xlr8rms.getData().then((resp)=>{
       // console.log(resp.data);
       this.todos = resp.data;
-      this.operation = resp.operation; 
+      this.operation = resp.operation;
+      
     });
   }
    @observable todos = [];
    @observable operation = "";
-
+   
    
    @computed
    get calcResult(){
