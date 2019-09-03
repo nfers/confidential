@@ -1,7 +1,7 @@
 import axios from 'axios'
 export default class Xlr8rms {
     constructor() {
-        axios.defaults.baseURL = "http://localhost:3000/";
+        axios.defaults.baseURL = "https://test.xlr8rms.com/";
     }
 
     login() {
@@ -14,7 +14,6 @@ export default class Xlr8rms {
 
     testToken() {
         return new Promise(resolve => {
-            //let token = localStorage.getItem('token');
 
             let token = undefined
             if (!token) {
@@ -26,7 +25,6 @@ export default class Xlr8rms {
                 }).catch(e => {
                     console.log(e);
                 })
-
             }
             else {
                 resolve(token);
