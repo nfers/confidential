@@ -15,7 +15,7 @@ cd confidential
 
 ### Inicializando o Projeto
 
-execute o comando 'npm run dev' para que o projeto seja inicialidado
+execute o comando 'npm start' para que o projeto seja inicialidado
 
 
 ### Informações adicionais
@@ -27,3 +27,4 @@ caso esteja executando já algo nesta porta é necessário alterar
 
 ncy.fers@gmail.com
 
++ 55 62 981832623 
