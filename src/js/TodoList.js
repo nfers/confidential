@@ -2,7 +2,7 @@ import React from "react"
 import { observer } from "mobx-react"
 import Xlr8rms from "./helpers/xlr8rms"
 import Bar from './components/Bar'
-import Avatar from "./avatar";
+import Avatar from "./components/avatar";
 
 
 const xlr8rms = new Xlr8rms();

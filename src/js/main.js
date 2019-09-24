@@ -9,11 +9,9 @@ import TodoList from "./TodoList"
 const app = document.getElementById("app")
 
 ReactDOM.render(
-<TodoList store={TodoStore} />, app);
+    <TodoList store={TodoStore} />, app);
 
 
-//npm i -g devextreme-cli
-//devextreme add devextreme-react
 
 
 
